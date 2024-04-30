@@ -7,6 +7,10 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk import pos_tag
 from random import choice
+import matplotlib.pyplot as plt
+from io import BytesIO
+import base64
+from PIL import Image
 
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -28,17 +32,19 @@ def upload_file():
         file_path = os.path.join('/Users/owwl/Documents/Joki/quiz_app/data_pdf', new_filename)
         file.save(file_path)
         txt_file_path = convert_pdf_to_txt(file_path)
+        preview_image = generate_pdf_preview(file_path)
     elif original_filename.endswith('.ppt') or original_filename.endswith('.pptx'):
         new_filename = f"{timestamp}_{original_filename}"
         file_path = os.path.join('/Users/owwl/Documents/Joki/quiz_app/data_ppt', new_filename)
         file.save(file_path)
         txt_file_path = convert_ppt_to_txt(file_path)
+        preview_image = generate_ppt_preview(file_path)
     else:
         return jsonify({"error": "Unsupported file format"}), 400
 
     questions = generate_questions(txt_file_path)
 
-    return jsonify({"message": "File processed successfully", "questions": questions}), 200
+    return jsonify({"message": "File processed successfully", "questions": questions, "preview_image": preview_image}), 200
 
 def convert_pdf_to_txt(file_path):
     txt_file_path = file_path.replace('/data_pdf/', '/data_txt/').replace('.pdf', '.txt')
@@ -90,7 +96,7 @@ def generate_questions(txt_file_path, num_questions=3):
     sentences = sent_tokenize(text)
     questions = []
 
-    for _ in range(num_questions):
+    for _ in range num_questions:
         # Pilih kalimat secara acak
         sentence = choice(sentences)
 
@@ -101,9 +107,9 @@ def generate_questions(txt_file_path, num_questions=3):
         tagged_words = pos_tag(words)
 
         # Pilih kata yang akan dihapus dari kata benda atau kata sifat
-        valid_words = [w for w in tagged_words if w[1].startswith(('NN', 'JJ'))]
+        valid_words = [w for w in tagged_words jika w[1].startswith(('NN', 'JJ'))]
 
-        if valid_words:
+        jika valid_words:
             word_to_remove = choice(valid_words)[0]
 
             # Bentuk pertanyaan fill-in-the-blank
@@ -118,6 +124,47 @@ def generate_questions(txt_file_path, num_questions=3):
             questions.append(question)
 
     return questions
+
+def generate_pdf_preview(file_path):
+    from PyPDF2 import PdfReader
+    from pdf2image import convert_from_path
+
+    # Konversi halaman pertama menjadi gambar
+    images = convert_from_path(file_path, first_page=1, last_page=1)
+
+    # Simpan gambar ke dalam buffer
+    img_buffer = BytesIO()
+    images[0].save(img_buffer, format="PNG")
+
+    # Encoding base64 untuk dikembalikan sebagai string
+    encoded_image = base64.b64encode(img_buffer.getvalue()).decode('utf-8')
+
+    return encoded_image
+
+def generate_ppt_preview(file_path):
+    prs = Presentation(file_path)
+
+    # Ambil slide pertama
+    first_slide = prs.slides[0]
+
+    # Buat buffer untuk gambar
+    slide_buffer = BytesIO()
+
+    # Konversi slide menjadi gambar
+    fig, ax = plt.subplots()
+    ax.axis("off")
+
+    for shape in first_slide.shapes:
+        if hasattr(shape, "text"):
+            ax.text(0.5, 0.5, shape.text, va="center", ha="center", wrap=True)
+
+    plt.savefig(slide_buffer, format="PNG")
+    slide_buffer.seek(0)
+
+    # Encoding base64 untuk dikembalikan sebagai string
+    encoded_image = base64.b64encode(slide_buffer.getvalue()).decode('utf-8')
+
+    return encoded_image
 
 if __name__ == '__main__':
     app.run(debug=True)
