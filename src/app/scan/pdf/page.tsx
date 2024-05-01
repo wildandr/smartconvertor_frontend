@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Cookies from 'js-cookie';
 
 const Pdf = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -18,11 +19,11 @@ const Pdf = () => {
     const file = event.target.files?.[0];
     if (file) {
       setSelectedFile(file);
-
+  
       // Upload file to API and get preview image URL
       const formData = new FormData();
       formData.append('file', file);
-
+  
       try {
         const response = await fetch('http://157.245.152.247:8000/upload', {
           method: 'POST',
@@ -30,15 +31,18 @@ const Pdf = () => {
         });
         if (response.ok) {
           const data = await response.json();
+          console.log(data);
           setPreviewImage(data.preview_image);
         } else {
-          console.error('Failed to upload file');
+          const errorData = await response.json();
+          console.error('Failed to upload file:', errorData);
         }
       } catch (error) {
         console.error('Error uploading file:', error);
       }
     }
   };
+  
 
   const handleScanButtonClick = () => {
     // Navigate to quiz page when scanning is done

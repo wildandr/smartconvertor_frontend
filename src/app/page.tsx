@@ -9,7 +9,7 @@ export default function Home() {
     router.push("/scan");
 };
   return (
-    <main className="h-[100vh] sm:ml-64">
+    <main className="h-[100vh] sm:ml-64 bg-white">
         <div className="bg-[#685ACB] h-full px-8 py-12  ">
           <div className="border-2 border-[#320083] rounded-3xl bg-gradient-to-r from-[#F8C63A] to-[#FDA717] px-5 pt-6 pb-10 text-black">
             <h1 className="font-medium text-2xl">Welcome back, Puti!</h1>
