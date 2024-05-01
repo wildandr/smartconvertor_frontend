@@ -19,7 +19,7 @@ export default function Home() {
             <h1 className="font-medium text-xl">
               Got some materials to drill?
             </h1>
-            <button className="border-[2.5px] border-[#320083] py-3 px-10 rounded-3xl bg-[#4ADA85] w-full max-w-[20rem]" onClick={handleScanButtonClick}>
+            <button className="border-[2.5px] border-[#320083] py-3 px-10 rounded-3xl bg-[#4ADA85] hover:bg-[#39B46C] w-full max-w-[20rem]" onClick={handleScanButtonClick}>
               <p className="font-semibold text-[#320083] text-xl ">
                 + Scan Now!
               </p>

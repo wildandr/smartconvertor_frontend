@@ -7,6 +7,9 @@ export default function Scan() {
   const toPdf = () => {
     router.push("/scan/pdf"); // Navigate to the scan page
   };
+  const toPpt = () => {
+    router.push("/scan/ppt"); // Navigate to the scan page
+  }
  
   return (
     <main className="sm:ml-64 bg-[#685ACB] h-[100vh]">
@@ -14,25 +17,25 @@ export default function Scan() {
           <h1 className="text-xl font-medium my-2">Scan</h1>
           <div className="flex items-center gap-4">
             <div className="flex flex-col items-center gap-2 w-1/4 ">
-              <a href="#" onClick={toPdf} className="border-2 border-[#320083] rounded-3xl bg-[#F7C93D] w-full py-8 text-black flex justify-center">
+              <a href="#" onClick={toPdf} className="border-2 border-[#320083] rounded-3xl bg-[#F7C93D] hover:bg-[#C6A233] w-full py-8 text-black flex justify-center">
                 <Image src="/pdf.png" alt="Quiz" width={110} height={110} />
               </a>
               <h1 className="text-white text-2xl font-semibold">PDF</h1>
             </div>
             <div className="flex flex-col items-center gap-2 w-1/4 ">
-              <div className="border-2 border-[#320083] rounded-3xl bg-[#F7C93D] w-full py-8 text-black flex justify-center">
+              <a href="#" onClick={toPpt} className="border-2 border-[#320083] rounded-3xl bg-[#F7C93D] hover:bg-[#C6A233] w-full py-8 text-black flex justify-center">
                 <Image src="/ppt.png" alt="Quiz" width={110} height={110} />
-              </div>
+              </a>
               <h1 className="text-white text-2xl font-semibold">PPT</h1>
             </div>
             <div className="flex flex-col items-center gap-2 w-1/4 ">
-              <div className="border-2 border-[#320083] rounded-3xl bg-[#F7C93D] w-full py-8 text-black flex justify-center">
+              <div className="border-2 border-[#320083] rounded-3xl bg-[#F7C93D] hover:bg-[#C6A233] w-full py-8 text-black flex justify-center">
                 <Image src="/docs.png" alt="Quiz" width={110} height={110} />
               </div>
               <h1 className="text-white text-2xl font-semibold">Docs</h1>
             </div>
             <div className="flex flex-col items-center gap-2 w-1/4 ">
-              <div className="border-2 border-[#320083] rounded-3xl bg-[#F7C93D] w-full py-8 text-black flex justify-center">
+              <div className="border-2 border-[#320083] rounded-3xl bg-[#F7C93D] hover:bg-[#C6A233] w-full py-8 text-black flex justify-center">
                 <Image src="/notes.png" alt="Quiz" width={110} height={110} />
               </div>
               <h1 className="text-white text-2xl font-semibold">Notes</h1>

@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-const Pdf = () => {
+const Ppt = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -50,7 +50,7 @@ const Pdf = () => {
       <div className="bg-[#685ACB] h-full px-8 py-12 flex flex-col gap-2 justify-center items-center">
         {!previewImage && (
           <>
-            <h1 className="text-[2rem] font-semibold">Scan your PDF!</h1>
+            <h1 className="text-[2rem] font-semibold">Scan your PPT!</h1>
             <h1 className="text-2xl font-medium">Turn your file into a quiz!</h1>
             <div className="max-w-md mt-2 w-full flex justify-center">
               <button
@@ -70,7 +70,7 @@ const Pdf = () => {
         )}
         {previewImage && (
           <div className="mt-4 flex flex-col justify-center items-center">
-            <embed src={previewImage} type="application/pdf" width="100%" height="500" />
+            <iframe src={previewImage} width="100%" height="500" title="PPT Preview" />
             <p className="text-lg font-medium mt-2">{selectedFile?.name}</p>
             <div className="max-w-md mt-2 w-full flex justify-center">
               <button
@@ -87,4 +87,4 @@ const Pdf = () => {
   );
 };
 
-export default Pdf;
+export default Ppt;
