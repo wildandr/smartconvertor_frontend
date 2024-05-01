@@ -30,7 +30,7 @@ export default function FillInQuiz() {
     };
 
     fetchData();
-  }, []);
+  }, [router]); // Add router as dependency
 
   const handleAnswerChange = (index: number, value: string) => {
     const newAnswers = [...answers];

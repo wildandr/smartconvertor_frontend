@@ -19,7 +19,7 @@ const Ppt = () => {
     if (file) {
       setSelectedFile(file);
 
-      // Upload file to API and get preview image URL
+      // Upload file to API and get preview image data
       const formData = new FormData();
       formData.append('file', file);
 
@@ -30,7 +30,19 @@ const Ppt = () => {
         });
         if (response.ok) {
           const data = await response.json();
-          setPreviewImage(data.preview_image);
+          // Decode base64 encoded image data
+          const decodedImageData = atob(data.preview_image);
+          // Convert decoded data to Uint8Array
+          const uint8Array = new Uint8Array(decodedImageData.length);
+          for (let i = 0; i < decodedImageData.length; i++) {
+            uint8Array[i] = decodedImageData.charCodeAt(i);
+          }
+          // Create Blob from Uint8Array
+          const blob = new Blob([uint8Array], { type: 'image/png' });
+          // Create object URL from Blob
+          const imageUrl = URL.createObjectURL(blob);
+  
+          setPreviewImage(imageUrl);
         } else {
           console.error('Failed to upload file');
         }
@@ -70,7 +82,7 @@ const Ppt = () => {
         )}
         {previewImage && (
           <div className="mt-4 flex flex-col justify-center items-center">
-            <iframe src={previewImage} width="100%" height="500" title="PPT Preview" />
+            <img src={previewImage} alt="PPT Preview" />
             <p className="text-lg font-medium mt-2">{selectedFile?.name}</p>
             <div className="max-w-md mt-2 w-full flex justify-center">
               <button

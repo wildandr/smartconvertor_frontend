@@ -43,7 +43,7 @@ return (
         aria-label="Sidebar"
       >
         <div className="h-full px-7 py-4 overflow-y-auto bg-white">
-          <Image src="/logo.png" alt="Logo" width={300} height={300} />
+          <Image src="/logo2.png" alt="Logo" width={300} height={300} />
           <ul className="space-y-4 font-medium">
             <li>
               <a

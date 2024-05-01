@@ -32,7 +32,20 @@ const Pdf = () => {
         if (response.ok) {
           const data = await response.json();
           console.log(data);
-          setPreviewImage(data.preview_image);
+          
+          // Decode base64 encoded image data
+          const decodedImageData = atob(data.preview_image);
+          // Convert decoded data to Uint8Array
+          const uint8Array = new Uint8Array(decodedImageData.length);
+          for (let i = 0; i < decodedImageData.length; i++) {
+            uint8Array[i] = decodedImageData.charCodeAt(i);
+          }
+          // Create Blob from Uint8Array
+          const blob = new Blob([uint8Array], { type: 'image/png' });
+          // Create object URL from Blob
+          const imageUrl = URL.createObjectURL(blob);
+  
+          setPreviewImage(imageUrl);
         } else {
           const errorData = await response.json();
           console.error('Failed to upload file:', errorData);
@@ -42,6 +55,7 @@ const Pdf = () => {
       }
     }
   };
+  
   
 
   const handleScanButtonClick = () => {
