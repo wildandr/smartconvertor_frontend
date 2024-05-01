@@ -1,0 +1,390 @@
+.freemium2-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .freemium2-freemium2 {
+    width: 100%;
+    height: 832px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(104, 90, 203, 1);
+  }
+  .freemium2-rectangle15 {
+    top: 0px;
+    left: 237px;
+    width: 1043px;
+    height: 674px;
+    position: absolute;
+  }
+  .freemium2-frame45 {
+    gap: 9px;
+    top: 100px;
+    left: 443px;
+    width: 598px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .freemium2-text {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    font-size: 30px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-frame40 {
+    gap: 10px;
+    width: 598px;
+    height: 150px;
+    display: flex;
+    padding: 19px 31px;
+    overflow: hidden;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: rgba(49, 0, 131, 1);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 30px;
+    flex-direction: column;
+    background-color: rgba(247, 201, 61, 1);
+  }
+  .freemium2-frame39 {
+    gap: 19px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .freemium2-text02 {
+    color: rgba(0, 0, 0, 1);
+    width: 162px;
+    height: auto;
+    font-size: 25px;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-frame38 {
+    gap: 17px;
+    display: flex;
+    align-items: center;
+  }
+  .freemium2-frame35 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .freemium2-group13 {
+    width: 236px;
+    height: 29px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .freemium2-text04 {
+    left: 23px;
+    color: rgba(0, 0, 0, 1);
+    width: 213px;
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-group11 {
+    top: 0px;
+    left: 0px;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .freemium2-ellipse4 {
+    top: 4px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 1px;
+  }
+  .freemium2-text06 {
+    left: 5px;
+    color: rgba(0, 0, 0, 1);
+    width: 14px;
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-group14 {
+    width: 236px;
+    height: 19px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .freemium2-group12 {
+    top: 0px;
+    left: 0px;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .freemium2-ellipse3 {
+    top: 4px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 1px;
+  }
+  .freemium2-text07 {
+    left: 5px;
+    color: rgba(0, 0, 0, 1);
+    width: 14px;
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-text08 {
+    top: 6px;
+    left: 23px;
+    color: rgba(0, 0, 0, 1);
+    width: 213px;
+    height: auto;
+    position: absolute;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 89.99999761581421%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-frame37 {
+    gap: 11px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .freemium2-frame36 {
+    display: flex;
+    align-items: flex-start;
+  }
+  .freemium2-text10 {
+    color: rgba(0, 0, 0, 1);
+    width: 55px;
+    height: auto;
+    font-size: 25px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-text12 {
+    color: rgba(0, 0, 0, 1);
+    width: 164px;
+    height: auto;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 89.99999761581421%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-text14 {
+    color: rgba(0, 0, 0, 1);
+    width: 264px;
+    height: auto;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 89.99999761581421%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-frame44 {
+    gap: 10px;
+    width: 598px;
+    height: 244px;
+    display: flex;
+    padding: 13px 33px;
+    overflow: hidden;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: rgba(49, 0, 131, 1);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 30px;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .freemium2-frame43 {
+    gap: 15px;
+    width: 524px;
+    height: 212px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .freemium2-text16 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 25px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-frame42 {
+    gap: 9px;
+    width: 524px;
+    height: 159px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .freemium2-frame41 {
+    gap: 9px;
+    display: flex;
+    align-items: center;
+  }
+  .freemium2-group15 {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .freemium2-ellipse5 {
+    top: 0px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 1px;
+  }
+  .freemium2-ellipse6 {
+    top: 2.39990234375px;
+    left: 2.69970703125px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+  }
+  .freemium2-text18 {
+    color: rgba(0, 0, 0, 1);
+    width: 291px;
+    height: auto;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 89.99999761581421%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-text19 {
+    color: rgba(0, 0, 0, 1);
+  }
+  .freemium2-text20 {
+    color: rgba(138, 138, 138, 1);
+    width: 782px;
+    height: auto;
+    font-size: 10px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 100%;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .freemium2-button {
+    gap: 10px;
+    display: flex;
+    padding: 11px 59px;
+    overflow: hidden;
+    align-items: center;
+    border-color: rgba(49, 0, 131, 1);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 30px;
+    justify-content: flex-end;
+    background-color: rgba(74, 218, 133, 1);
+  }
+  .freemium2-text38 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 14px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  

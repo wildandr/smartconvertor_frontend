@@ -1,6 +1,9 @@
 "use client"
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+
+
+
 export default function Sidebar() {
     const router = useRouter();
     const handleHomeButtonClick = () => {
@@ -11,6 +14,12 @@ export default function Sidebar() {
     };
     const handleQuizButtonClick = () => {
         router.push("/quiz");
+    };
+    const handleAboutUsButtonClick = () => {
+      router.push("/about");
+    };
+    const handleHelpButtonClick = () => {
+      router.push("/help");
     };
 return (
     <main>
@@ -105,6 +114,7 @@ return (
             <li>
               <a
                 href="#"
+                onClick={handleAboutUsButtonClick}
                 className="flex items-center p-2 text-gray-400 hover:text-gray-900 rounded-lg hover:bg-[#8C7BFF] group focus:border-2 focus:text-gray-900 focus:border-black"
               >
                 <svg
@@ -144,6 +154,8 @@ return (
             <li>
               <a
                 href="#"
+
+                onClick={handleHelpButtonClick}
                 className="flex items-center p-2 text-gray-400 hover:text-gray-900 rounded-lg hover:bg-[#8C7BFF] group focus:border-2 focus:text-gray-900 focus:border-black"
               >
                 <Image src="/help.png" alt="Quiz" width={22} height={22} />
