@@ -67,7 +67,7 @@ export default function FillInQuiz() {
         const newScore = (correctCount / totalQuestions) * 100;
         router.push(`/quiz/fill-in/${newScore.toFixed(2)}`);
       } else {
-        console.error("Failed to submit answers");
+        console.error("Failed to submit ");
       }
     } catch (error) {
       console.error("Error submitting answers:", error);
